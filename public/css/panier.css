@@ -1,0 +1,12 @@
+#panier_img{
+    max-width: 400px ;
+    height:300px  ;
+}
+.produit_panier_img{
+    max-width: 200px ;
+    max-height: 150px ;
+    transition: ease-out 0.2s;
+}
+.produit_panier_img:hover{
+    transform: scale(1.04);
+}   

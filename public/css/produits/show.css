@@ -1,0 +1,14 @@
+body{
+    font-family: "Roboto" , sans-serif;
+}
+#del-price{
+    font-size: 20px ;
+    color:gray ;
+}
+#price{
+    font-size: 20px ;
+    color : red ;
+}
+.btn-acheter-ajouter{
+    font-size: 17px;
+}

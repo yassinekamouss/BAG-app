@@ -1,0 +1,36 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: rgb(253, 253, 253);
+}
+.acceuil_img{
+    height: 400px ;
+    width: 100% ;
+    background-image: url('../Images/gettyimages-1175391517-2048x2048.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed ;
+    background-size:cover;
+}
+.acceuil_img .content{
+    backdrop-filter: blur(70px);
+    width: 50%;
+}
+.acceuil_img a{
+    width: fit-content;
+}
+.categorie img{
+    height: 300px ;
+}
+.avantage_partie{
+    background-color: #000;
+}
+.avantage_partie p{
+    font-size: 16px;
+}
+@media(max-width:400px){
+    .avantage_partie p{
+        font-size: 12px;
+    }
+}

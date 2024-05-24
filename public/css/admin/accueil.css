@@ -1,0 +1,13 @@
+body{
+  background-color: #f8f8f8;
+}
+.teste:hover{
+    background-color: #f7a800; 
+    color : #fff ;
+}
+.card-info{
+  cursor: pointer;
+}
+.carts-accueil{
+  background-color: #fff;
+}

@@ -1,0 +1,17 @@
+.form{
+    background-color: #fff ;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1) ;
+}
+.btn{
+    background-color: #ffbd2f;
+    font-size: 18px ;
+    font-family: sans-serif ;
+}
+.btn:hover{
+    background-color: #f7a800 ;
+}
+@media(min-width:1000px){
+    .container{
+        width: 600px;
+    }
+}

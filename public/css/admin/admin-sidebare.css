@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li:hover{
+    background-color: rgb(44, 50, 56);
+}
+    /* #list-de-task-admin{
+        border-bottom: 0.5px solid #fff;
+    } */

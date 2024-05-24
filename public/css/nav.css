@@ -1,0 +1,17 @@
+/*  Debut de style de navbar */
+
+/* debut de style globale pour navbar */
+    .navbar{
+        background-color: #000;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+        color: #fff;
+        font-family: "Roboto" , sans-serif;
+        /* height: 50px; */
+    }
+    .navbar img{
+        width: 120px ;
+    }
+    .search-container{
+        width: 400px ;
+    }
+/* fin de style globale pour navbar *

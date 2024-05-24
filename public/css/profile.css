@@ -1,0 +1,29 @@
+.taches_profile li:hover{
+    background-color: rgb(238, 238, 238) ;
+    cursor: pointer;
+}
+/* i.rounded-circle{
+    background-color: rgb(238, 238, 238) ;
+} */
+#editIcon {
+    cursor: pointer;
+}
+li .li-text{
+    font-size: 20px ;
+}
+#profileId i {
+    font-size : 60px ;
+}
+#parametre_profile_container{
+    max-width: 650px ;
+}
+#acceuil_text{
+    font-size: 16px;
+}
+/* 
+@media(max-width : 900){
+    #acceuil_text{
+        font-size: 30px;
+    }    
+} 
+*/

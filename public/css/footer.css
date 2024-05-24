@@ -1,0 +1,49 @@
+/* debut style de footer */
+.footer{
+    background-color: #000;
+    color: #fff;
+    font-family: "Roboto" ,sans-serif;
+}
+.footer .container .row .medium .fw-light{
+    color: #dbdbdb;
+    font-size: 13px;
+}
+.footer .container .row .medium .fw-light:hover{
+    color: #fff;
+}
+.footer .container .row .end .icons i{
+    font-size: 24px ;
+}
+.footer .container .row .first .row  p{
+    font-size: 11px;
+    font-weight: 400;
+}
+.footer .container .row .first .row #singup-btn{
+    width: 100%;
+    border-radius: 40px ;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.2s ease-out;
+}
+.footer .container .row .first .row #singup-btn:hover {
+    transform: scale(1.06);
+}
+.footer .container .row .first .row #singup-btn span{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 100;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+@media(min-width:400px){
+    .footer .container .row .first .row #singup-btn{
+        border-radius: 30px ;
+        padding: 8px 10px;
+    }
+    .footer .container .row .first .row #singup-btn span{
+        font-size: 12px;
+    }
+}
+/* fin style de footer */
