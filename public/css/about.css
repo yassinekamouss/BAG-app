@@ -1,0 +1,26 @@
+body{
+    margin: 0 ;
+    padding: 0 ;
+    height: 100% ;
+}
+.navbar{
+    background-color: transparent;
+}
+.navbar-scroll {
+    background-color: #000 ;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.25);
+}
+#main-container{
+    min-height: 100%;
+    position: relative;
+    background-image: linear-gradient(to right , rgb(0, 0, 0) , rgb(246, 252, 255) ) ;
+    background-size: 100% 500px; /* 100% de la largeur, 400px de hauteur */
+    background-repeat: no-repeat; /* Ne pas répéter le fond verticalement */
+}
+#content-container {
+    padding-top: 70px;
+}
+.content{
+    backdrop-filter: blur(100px);
+    width: 50%;
+}

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
   <div class="container">
     <a class="navbar-brand" href="{{route('home')}}">
       <img src="{{ asset('Images/Hyundai-Logo-PNG-Transparent.png') }}" alt=""> 
@@ -12,7 +12,7 @@
           <a class="nav-link active" aria-current="page" href="{{route('home')}}">Acceuil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">A propos</a>
+          <a class="nav-link" href="{{ route('about') }}">A propos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('contact.form') }}">Contact</a>

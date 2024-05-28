@@ -65,10 +65,27 @@
                         {{-- Affichage de produits: --}}
                         <div class=" d-none" id="{{$commande->id}}">
                             @foreach ($commande->produits as $produit)
-                                <div class="d-flex justify-content-between">
-                                    <span>{{$produit->title}} <span class="fw-bold text-secondary">*{{$produit->pivot->quantite}}</span></span>
-                                    <span>{{$produit->prix}}DH</span>
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="{{route('produits.show' , $produit->id)}}">
+                                            <img src="{{asset('storage/'.$produit->image)}}" alt=""  class="mb-3 produit_panier_img">
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-between">
+                                            <h4 class="fs-5 mt-5">{{$produit->title}}</h4>
+                                        </div>
+                                            @if ($produit->quantite > 0)
+                                                <p class="text-success fs-6">En Stock</p>
+                                            @else
+                                                <p class="text-danger">Pas dans le Stock</p>
+                                            @endif  
+                                            <div>
+                                                Quantite : {{ $produit->pivot->quantite }}
+                                            </div> 
+                                    </div>
                                 </div>
+                                <hr>
                             @endforeach
                         </div>
                             <div class="d-flex justify-content-between">

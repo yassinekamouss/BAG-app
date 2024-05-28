@@ -18,12 +18,16 @@
     <title>@yield('title')</title>
 </head>
 <body>
+    <div id="main-container">
+        <x-navbar />
+        
+        <div id="content-container">
+            @yield('content')            
+        </div>
 
-    <x-navbar />
+        <x-footer />         
+    </div>
 
-    @yield('content')
-
-    <x-footer /> 
 
     {{-- Include bootstrap's js files  --}}
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -31,6 +35,7 @@
     <script src="{{ asset('js/search_product.js')}}"></script>
     {{-- le fichier js de la page: --}}
     <script src="@yield('js')"></script>
+    <script src="{{ asset('js/navbar.js') }}"></script>
 
 </body>
 </html>
