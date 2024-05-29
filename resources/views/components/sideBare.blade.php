@@ -1,6 +1,7 @@
 <div class="bg-dark col-auto side-bare vh-100 position-sticky left-0 top-0 shadow">
     <div class="bg-dark p-2">
-        <i class="fa-solid fa-arrow-left fs-4 text-light ms-3 mt-5" id="display-sidebar"></i>
+        {{-- <i class="fa-solid fa-arrow-left fs-4 text-light ms-3 mt-5" id="display-sidebar"></i> --}}
+        <i class="fa-solid fa-chevron-left fs-5 text-light ms-sm-4 mt-5" id="display-sidebar"></i>
         <div class="d-flex justify-content-center align-items-center text-decoration-none text-white">
             <span class="fs-3 mt-2 fw-bold d-none d-lg-inline ms-2 list-de-task-admin" id="list-de-task-admin">
                 Admin page

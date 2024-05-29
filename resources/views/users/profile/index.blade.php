@@ -59,7 +59,17 @@
                             </div>
                             <div>
                                 <p class="fw-bold mb-0">Etat</p>
-                                <p class="text-danger">{{$commande->etat}}</p>
+                                <p class="">
+                                    @if ($commande->etat === 'En attente de traitement')
+                                        <span class="badge bg-danger">En attente</span>
+                                    @elseif($commande->etat === 'En cours de traitement')
+                                        <span class="badge bg-primary">En cours</span>
+                                    @elseif($commande->etat === 'Livrée')
+                                        <span class="badge bg-success">Livrée</span>
+                                    @elseif($commande->etat === 'Annulée')
+                                        <span class="badge bg-secondary">Annulée</span>
+                                    @endif
+                                </p>
                             </div>
                         </div>
                         {{-- Affichage de produits: --}}
@@ -93,7 +103,7 @@
                                 <span class="fw-bold">{{$total}}Dh</span>
                             </div>
                         <div class="d-flex justify-content-end">
-                            <button id="btn" class="btn btn-success rounded-3 mt-3" onclick="showDetails({{$commande->id}})"><i class="fas fa-info-circle me-2"></i>Details</button>
+                            <button id="btn" class="btn btn-light fw-bold rounded-3 mt-3" onclick="showDetails({{$commande->id}})"><i class="fas fa-info-circle me-2"></i>Details</button>
                         </div>
                     </div>
                 @endforeach

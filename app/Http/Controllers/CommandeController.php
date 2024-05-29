@@ -143,47 +143,57 @@ class CommandeController extends Controller
 
 /********************************** fonction de recherche de produits'par nom'**********************************/
 public function search(Request $request){
-    // Vérifier si une valeur de recherche est présente
     if($request->has('code') && $request->filled('code')) {
-        // Récupérer les commandes correspondantes à la recherche
-        $commandes = Commande::where('id' , 'LIKE' , $request->code .'%')->paginate(15); // Vous pouvez ajuster le nombre d'éléments par page selon vos besoins
+        $commandes = Commande::where('id', 'LIKE', $request->code . '%')->paginate(15);
     } else {
-        // Aucune valeur de recherche présente, renvoyer toutes les commandes
-        $commandes = Commande::latest()->paginate(15); // Vous pouvez ajuster le nombre d'éléments par page selon vos besoins
+        $commandes = Commande::latest()->paginate(15);
     }
 
-    // Générer la vue pour les commandes
+    if ($commandes->count() < 1){
+        $commandes = Commande::whereHas('client', function($q) use ($request) {
+            $q->where('email', 'LIKE', $request->code . '%');
+        })->paginate(15);
+    }
+
     $output = '';
     if($commandes->count() > 0){
         foreach($commandes as $commande){
-            //calcule du total de la commande : 
-            $total = 0 ;
+            $total = 0;
             foreach($commande->produits as $produit){
-                $total += $produit->prix * $produit->pivot->quantite ;
+                $total += $produit->prix * $produit->pivot->quantite;
             }
+
+            $etatBadge = '';
+            if ($commande->etat === 'En attente de traitement') {
+                $etatBadge = '<span class="badge bg-danger">En attente</span>';
+            } elseif ($commande->etat === 'En cours de traitement') {
+                $etatBadge = '<span class="badge bg-primary">En cours</span>';
+            } elseif ($commande->etat === 'Livrée') {
+                $etatBadge = '<span class="badge bg-success">Livrée</span>';
+            } elseif ($commande->etat === 'Annulée') {
+                $etatBadge = '<span class="badge bg-secondary">Annulée</span>';
+            }
+
             $output .= '<tr>';
-                //details de la commande : 
-                $output .= "<th>$commande->id</th>";
-                $output .= "<td>$commande->created_at</td>";
-                $output .= "<td>$commande->date_de_livraison</td>";
-                $output .= "<td>" . $commande->client->email . "</td>";
-                $output .= "<td>$commande->etat</td>";
-                $output .= "<td>" . $total . "DH</td>";
-                //form de suppression :
-                $output .= '<td><form action="' . route("commandes.destroy", $commande->id) . '" method="POST" class="delete-form">';
-                    $output .= '<input type="hidden" name="_token" value="' . csrf_token() . '">';
-                    $output .= '<input type="hidden" name="_method" value="DELETE">';
-                    $output .= '<button class="border-0 bg-transparent" type="submit"><i class="fs-5 text-danger fa-solid fa-trash" ></i></button>';
-                $output .= '</form></td>';
-                //l'icon de modification de la commande : 
-                $output .= '<td>';
-                    $output .= "<a href='" . url("produits/{$commande->id}/edit") . "'>";
-                        $output .= '<i class="fs-5 text-success fa-solid fa-eye"></i>';
-                    $output .= "</a>"; 
-                $output .= '</td>';
+            $output .= "<th>{$commande->id}</th>";
+            $output .= "<td>{$commande->created_at}</td>";
+            $output .= "<td>{$commande->date_de_livraison}</td>";
+            $output .= "<td>{$commande->client->email}</td>";
+            $output .= "<td>{$etatBadge}</td>";
+            $output .= "<td>{$total}DH</td>";
+            $output .= '<td><form action="' . route("commandes.destroy", $commande->id) . '" method="POST" class="delete-form">';
+            $output .= '<input type="hidden" name="_token" value="' . csrf_token() . '">';
+            $output .= '<input type="hidden" name="_method" value="DELETE">';
+            $output .= '<button class="border-0 bg-transparent" type="submit"><i class="fs-5 text-danger fa-solid fa-trash"></i></button>';
+            $output .= '</form></td>';
+            $output .= '<td>';
+            $output .= "<a href='" . url("produits/{$commande->id}/edit") . "'>";
+            $output .= '<i class="fs-5 text-success fa-solid fa-eye"></i>';
+            $output .= "</a>";
+            $output .= '</td>';
             $output .= '</tr>';
         }
-    }else{
+    } else {
         $output = "<tr><td colspan='8'>Aucune commande trouvée</td></tr>";
     }
 

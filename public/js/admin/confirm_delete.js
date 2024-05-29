@@ -22,11 +22,11 @@ barIcon.addEventListener('click' , ()=>{
     allLi.forEach((element) => {
         element.classList.toggle('d-lg-none');
     });
-    if(barIcon.classList.contains('fa-arrow-right')){
-        barIcon.classList.remove('fa-arrow-right');
-        barIcon.classList.add('fa-arrow-left');
+    if(barIcon.classList.contains('fa-chevron-right')){
+        barIcon.classList.remove('fa-chevron-right');
+        barIcon.classList.add('fa-chevron-left');
     }else{
-        barIcon.classList.add('fa-arrow-right');
-        barIcon.classList.remove('fa-arrow-left');
+        barIcon.classList.add('fa-chevron-right');
+        barIcon.classList.remove('fa-chevron-left');
     }
 });

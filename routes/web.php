@@ -12,7 +12,6 @@ use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\PanierController;
 use App\Http\Controllers\ProfileControler;
 use App\Models\Produit;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------

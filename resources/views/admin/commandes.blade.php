@@ -13,7 +13,7 @@
                 <h4 class="card-header bg-secondary text-light">Liste des Commandes</h4>
                 <div class="card-body p-4">
                     <div class="input-group input-group-lg mb-3">
-                        <input type="search" id="searchInput" class="form-control" placeholder="Search Commande by Code" aria-label="Search" aria-describedby="button-addon2">
+                        <input type="search" id="searchInput" class="form-control" placeholder="Search Commande by Code , by client email" aria-label="Search" aria-describedby="button-addon2">
                         <button class="btn btn-secondary" id="button-addon2" type="button" ><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                     <x-alert />
@@ -48,7 +48,17 @@
                                     <td>{{$commande->created_at}}</td>
                                     <td>{{$commande->date_de_livraison}}</td>
                                     <td>{{$commande->client->email}}</td>
-                                    <td>{{$commande->etat}}</td>
+                                    <td>
+                                        @if ($commande->etat === 'En attente de traitement')
+                                            <span class="badge bg-danger">En attente</span>
+                                        @elseif($commande->etat === 'En cours de traitement')
+                                            <span class="badge bg-primary">En cours</span>
+                                        @elseif($commande->etat === 'Livrée')
+                                            <span class="badge bg-success">Livrée</span>
+                                        @elseif($commande->etat === 'Annulée')
+                                            <span class="badge bg-secondary">Annulée</span>
+                                        @endif
+                                    </td>
                                     <td>{{$total}}DH</td>
                                     <td style="cursor: pointer ;">
                                         <form action="{{route('commandes.destroy' , $commande->id)}}" method="POST" class="delete-form">

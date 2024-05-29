@@ -1,6 +1,7 @@
 const searchInput = document.getElementById('searchInput');
-searchInput.addEventListener('keyup' , ()=>{
-    let value = searchInput.value ;
+
+searchInput.addEventListener('keyup', () => {
+    let value = searchInput.value;
     fetch(`commandes/search?code=${value}`, {
         method: 'GET',
         headers: {
