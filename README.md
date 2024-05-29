@@ -22,7 +22,7 @@ git clone https://github.com/yassinekamouss/laravel-app-repo.git
 ### Installation des Dépendances
 
 ```
-cd <nom_du_dossier>
+cd laravel-app-repo
 composer install
 npm install
 ```
