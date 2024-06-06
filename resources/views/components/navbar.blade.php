@@ -70,7 +70,7 @@
             </li>
           @endauth
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" target="_blank" href="https://www.google.com/maps/place/Florida+centre+park/@33.519589,-7.635095,15z/data=!4m6!3m5!1s0xda62dba5bf1c4fd:0xf10f650ef3b3315e!8m2!3d33.5215084!4d-7.6363821!16s%2Fg%2F11m_kvc6jm?hl=fr&entry=ttu">
               <i class="fa-solid fa-location-dot text-center"></i>
             </a>
           </li>

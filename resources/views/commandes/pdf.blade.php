@@ -39,7 +39,7 @@
     <table style="width : 100% ;">
         <tr>
             <td style="text-align: left ;">
-                <span class="align-left fw-bold" style="font-size: 1.9rem; color: rgb(90, 97, 104);">Détails de la commande</span>
+                <span class="align-left fw-bold" style="font-size: 2.3rem; color: rgb(90, 97, 104);">Facture</span>
                 @if (count($commande->produits) === 1)
                     @if ($commande->produits->first()->quantite < 1)
                         <span class="text-danger fw-bold">(Commande fermée)</span>
