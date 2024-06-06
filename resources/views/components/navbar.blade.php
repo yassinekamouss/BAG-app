@@ -59,13 +59,11 @@
             <li class="nav-item">
               <a href="{{route('users.profile')}}" class="nav-link" role="button">
                 <i class="fa-solid fa-user"></i>Profile
-                {{-- <span>Profile</span> --}}
               </a>
             </li>
             <li class="nav-item">
               <a href="{{route('connecte.logout')}}" class="nav-link" role="button">
                 <i class="fa-solid fa-right-from-bracket"></i>Logout
-                {{-- <span>Logout</span> --}}
               </a>
             </li>
           @endauth
