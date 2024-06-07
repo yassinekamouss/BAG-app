@@ -26,10 +26,6 @@ cd laravel-app-repo
 composer install
 npm install
 ```
-<p>cd laravel-app-repo</p>
-<p>composer install</p>
-<p>npm install</p>
-
 ### Configuration du Fichier .env
 
 ```
