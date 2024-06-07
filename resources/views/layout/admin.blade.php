@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     {{-- bootstrap --}}
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontawesome-free-6.5.2-web/css/all.min.css') }}">
     {{-- sidebare style! --}}
     <link rel="stylesheet" href="{{ asset('css/admin/admin-sidebare.css') }}">
     <title>@yield('title' , 'Admin page')</title>
@@ -33,7 +34,7 @@
     
     {{-- Include bootstrap's js files  --}}
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="https://kit.fontawesome.com/75eed29eab.js" crossorigin="anonymous"></script>
+    {{-- <script src="https://kit.fontawesome.com/75eed29eab.js" crossorigin="anonymous"></script> --}}
 
     {{-- File de script de associe a la page --}}
     @vite('resources/js/app.js')
