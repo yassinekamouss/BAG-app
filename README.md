@@ -46,6 +46,8 @@ php artisan key:generate
 
 ```
 php artisan serve
+php artisan websockets:serve
+npm run dev
 ```
 
 # Learning Laravel
