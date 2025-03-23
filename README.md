@@ -11,6 +11,7 @@ AutoParts Hub est une application web permettant aux clients de parcourir et d'a
 
 ## 📷 Capture d'écran
 ![Capture d'écran](https://github.com/yassinekamouss/BAG-app/blob/c7a07fb65624dcc39fae0fdac6eb71ecf6a92b35/Sans%20titre.png)
+<img src="https://github.com/yassinekamouss/BAG-app/blob/c7a07fb65624dcc39fae0fdac6eb71ecf6a92b35/Sans%20titre.png" width="100%">
 
 ## 📂 Installation
 ### 1️⃣ Prérequis
