@@ -10,7 +10,7 @@ AutoParts Hub est une application web permettant aux clients de parcourir et d'a
 - **Paiement en ligne** : Stripe
 
 ## 📷 Capture d'écran
-_(Ajoutez ici une capture d'écran de l'application)_
+[capture d'écran](https://github.com/yassinekamouss/BAG-app/blob/c7a07fb65624dcc39fae0fdac6eb71ecf6a92b35/Sans%20titre.png)
 
 ## 📂 Installation
 ### 1️⃣ Prérequis
@@ -50,11 +50,11 @@ php artisan serve
 L'application sera accessible sur `http://127.0.0.1:8000`.
 
 ## 🛒 Fonctionnalités principales
-- 📌 **Catalogue de pièces Hyundai**
-- 🔍 **Recherche et filtrage des produits**
-- 🛍️ **Gestion du panier**
-- 💳 **Paiement en ligne sécurisé avec Stripe**
-- 📊 **Tableau de bord admin (gestion des commandes, utilisateurs, statistiques avec Chart.js)**
+- **Catalogue de pièces Hyundai**
+- **Recherche et filtrage des produits**
+- **Gestion du panier**
+- **Paiement en ligne sécurisé avec Stripe**
+- **Tableau de bord admin (gestion des commandes, utilisateurs, statistiques avec Chart.js)**
 
 ## ✨ Auteur
 Développé par **Yassine Kamouss**.
