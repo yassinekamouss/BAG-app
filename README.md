@@ -1,66 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# AutoParts Hub - Plateforme de Vente de Pièces Automobiles
 
-<p align="center">
-Application de vente de pieces automobiles
-</p>
+## 📌 Description
+AutoParts Hub est une application web permettant aux clients de parcourir et d'acheter des pièces automobiles spécifiques à la marque Hyundai. L'application offre une expérience fluide avec un panier d'achat, un système de commande et un paiement sécurisé via Stripe. Un tableau de bord administrateur permet de gérer les produits, les commandes et les utilisateurs.
 
-# Prérequis
+## 🚀 Technologies utilisées
+- **Backend** : Laravel
+- **Frontend** : Bootstrap, jQuery
+- **Graphiques** : Chart.js
+- **Paiement en ligne** : Stripe
 
-- PHP 7.4 ou supérieur
+## 📷 Capture d'écran
+_(Ajoutez ici une capture d'écran de l'application)_
+
+## 📂 Installation
+### 1️⃣ Prérequis
+- PHP (>= 8.0)
 - Composer
-- Node.js et npm
+- Node.js & npm
+- MySQL
 
-
-# Installation
-
-### Clonage du Dépôt
-
-```
-git clone https://github.com/yassinekamouss/laravel-app-repo.git
+### 2️⃣ Cloner le projet
+```bash
+git clone https://github.com/votre-repo/autoparts-hub.git
+cd autoparts-hub
 ```
 
-### Installation des Dépendances
-
-```
-cd laravel-app-repo
+### 3️⃣ Installer les dépendances
+```bash
 composer install
-npm install
+npm install && npm run dev
 ```
-### Configuration du Fichier .env
 
-```
+### 4️⃣ Configurer l'environnement
+Copiez le fichier `.env.example` en `.env` et configurez la base de données ainsi que les clés Stripe.
+```bash
 cp .env.example .env
-```
-
-### Génération de la Clé d'Application
-
-```
 php artisan key:generate
 ```
 
-### Lancement du Serveur de Développement
-
+### 5️⃣ Exécuter les migrations et seeders
+```bash
+php artisan migrate --seed
 ```
+
+### 6️⃣ Lancer le serveur
+```bash
 php artisan serve
-php artisan websockets:serve
-npm run dev
 ```
+L'application sera accessible sur `http://127.0.0.1:8000`.
 
-# Learning Laravel
+## 🛒 Fonctionnalités principales
+- 📌 **Catalogue de pièces Hyundai**
+- 🔍 **Recherche et filtrage des produits**
+- 🛍️ **Gestion du panier**
+- 💳 **Paiement en ligne sécurisé avec Stripe**
+- 📊 **Tableau de bord admin (gestion des commandes, utilisateurs, statistiques avec Chart.js)**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ✨ Auteur
+Développé par **Yassine Kamouss**.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 📜 Licence
+Ce projet est sous licence MIT.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-# Contributing
-
-Thank you for considering contributing to this project.
-
-# Security Vulnerabilities
-
-If you discover a security vulnerability within this project, please send an e-mail to [yassinekamouss76@gmail.com](mailto:yassinekamouss76@gmail.com).
 
 # License
 
